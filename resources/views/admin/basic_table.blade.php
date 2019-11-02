@@ -10,7 +10,7 @@
            <ol class="breadcrumb">
 
                <li><a href="#">Dashboard</a></li>
-               <li class="active">Basic Table Page</li>
+               <li class="active">Workshop Log Page</li>
            </ol>
         </div>
     </div>
@@ -18,9 +18,18 @@
     <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                         <div class="white-box">
-                            <div class="col-md-3 col-sm-4 col-xs-6 pull-right" style="color:#f33155">
-                                {{date('M D Y')}}
+                            <div class="col-md-3 col-sm-4 col-xs-6 pull-right" >
+                                   <i style="color:#f33155"> {{date('M D Y')}} </i>
+
+                                   <a href="{{url('/pdf_report')}}" class=" pull-right ">
+                                     <i class="fa fa-print fa-fw"></i>
+                                   </a>
+                                   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                                   <a href="{{url('/admin_excel')}}" class="">
+                                     <i class="fa fa-file-excel-o xl" style="width: 30px"></i>
+                                  </a>
                             </div>
+                           
                             <h3 class="box-title" style="color:#f33155">Store Updates</h3>
                             <div class="table-responsive">
                                 <table class="table">
@@ -28,12 +37,17 @@
                                         <tr>
                                             <th>ID#</th>
                                             <th>Date in</th>
-                                            <th>Serial #</th>
-                                            <th>Type Of machine</th>
+                                            <th>Serial#</th>
+                                            <th>Barcode#</th>
+                                            <th>Ticket#</th>
+                                            <th>Machine Type</th>
                                             <th>Location</th>
-                                            <th>Brought by</th>
+                                            <th>Department</th>
+                                            <th>Email</th>
+                                            <th>Phone#</th>
+                                            <th>Extension#</th>
                                             <th>Date out</th>
-                                            <th>Collected By</th>
+                                            <th>CollectedBy</th>
                                             <th>Remarks</th>
                                             <th colspan="2" class="text-center">Action</th>
 
@@ -45,10 +59,15 @@
                                             <td>{{$t->id}}</td>
                                             <td class="txt-oflo">{{$t->date_in}}</td>
                                             <td class="txt-oflo">{{$t->serial_number}}</td>
+                                            <td class="txt-oflo">{{$t->bar_code}}</td>
+                                            <td class="txt-oflo">{{$t->ticket_number}}</td>
                                             <td class="txt-oflo">{{$t->type_of_machine}}</td>
                                             <td class="txt-oflo">{{$t->location}}</td>
-                                            <td class="txt-oflo">{{$t->brought_by}}</td>
-                                            <td class="txt-oflo">{{$t->date_out}}</td>
+                                            <td class="txt-oflo">{{$t->department}}</td>
+                                            <td class="txt-oflo">{{$t->user_email}}</td>    
+                                            <td class="txt-oflo">{{$t->phone}}</td>    
+                                            <td class="txt-oflo">{{$t->office_phone}}</td>    
+                                            <td class="txt-oflo">{{$t->date_out}}</td>    
                                             <td class="txt-oflo">{{$t->collected_by}}</td>    
                                             <td class="txt-oflo">{{$t->remark}}</td>
                                             <td>

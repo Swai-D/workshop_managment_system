@@ -36,36 +36,31 @@
                     </div>
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form class="form-horizontal form-material" enctype="multipart/form-data" action="/profile" method="POST">
+                            <form class="form-horizontal form-material" enctype="multipart/form-data" action="/update_profile" method="POST">
                                 <div class="form-group">
                                     <label class="col-md-12">Full Name</label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="Johnathan Doe"
-                                            class="form-control form-control-line"></div>
+                                            class="form-control form-control-line" value="{{old('name')?? Auth::user()->name}}" disabled="disabled"> </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="example-email" class="col-md-12">Email</label>
                                     <div class="col-md-12">
                                         <input type="email" placeholder="johnathan@admin.com"
                                             class="form-control form-control-line" name="example-email"
-                                            id="example-email"> </div>
+                                            id="example-email" value="{{old('email')?? Auth::user()->email}}" disabled="disabled"></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Password</label>
                                     <div class="col-md-12">
-                                        <input type="password" value="password" class="form-control form-control-line">
+                                        <input type="password" value="password" class="form-control form-control-line" disabled="disabled" value="{{old('password')?? Auth::user()->password}}">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Phone No</label>
-                                    <div class="col-md-12">
-                                        <input type="text" placeholder="123 456 7890"
-                                            class="form-control form-control-line"> </div>
-                                </div>
+    
                                 <div class="form-group">
                                     <label class="col-md-12">Photo</label>
                                     <div class="col-md-12">
-                                          <input type="file" name ="avatar" class="form-control form-control-line">
+                                          <input type="file" name ="avatar" class="form-control form-control-line" required autocomplete="avatar" autofocus>
                                     </div>
                                 </div>
                             

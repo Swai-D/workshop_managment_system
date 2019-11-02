@@ -22,11 +22,11 @@
                             <div class="sk-chat-widgets">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        Enter Serial #
+                                        Enter Ticket #
                                     </div>
                                     <div class="panel-body form-group">
                                         <form action="/item_live_search" method="POST">
-                                        	<input type="number" name="q" placeholder="Serial No. 4CE0460D0G."class="form-control">
+                                        	<input type="number" name="q" placeholder="eg.Ticket No. 1274."class="form-control">
                                         	<br>
                                         	<button type="submit" class="btn btn-danger btn-block waves-effect waves-light">send</button>
                                             @csrf
@@ -50,7 +50,8 @@
 											    <tr>
 											      <th scope="col">#</th>
                                                   <th scope="col">Item Name</th>
-											      <th scope="col">Serial #</th>
+                                                  <th scope="col">Serial #</th>
+											      <th scope="col">Ticket #</th>
 											      <th scope="col">Date Received</th>
 											      <th scope="col">Status</th>
 											    </tr>
@@ -59,6 +60,7 @@
 											    <tr>
 											      <th scope="row"></th>
 											      <td></td>
+                                                  <td></td>
 											      <td></td>
 											      <td></td>
 											    </tr>

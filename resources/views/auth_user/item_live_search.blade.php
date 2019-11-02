@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="panel-body form-group">
                                         <form action="/item_live_search" method="POST">
-                                        	<input type="number" name="q" placeholder="Serial No. 4CE0460D0G."class="form-control">
+                                        	<input type="number" name="q" placeholder="eg.Ticket No. 1274."class="form-control">
                                         	<br>
                                         	<button type="submit" class="btn btn-danger btn-block waves-effect waves-light">send</button>
                                             @csrf
@@ -53,6 +53,7 @@
 											      <th scope="col">#</th>
 											      <th scope="col">Item Name</th>
                                                   <th scope="col">Serial #</th>
+                                                  <th scope="col">Ticket #</th>
                                                   <th scope="col">Date Received</th>
 											      <th scope="col">Status</th>
 											    </tr>
@@ -62,7 +63,8 @@
 											    <tr>
 											      <th scope="row">{{$d-> id}}</th>
                                                   <td>{{$d-> type_of_machine}}</td>
-											      <td>{{$d-> serial_number}}</td>
+                                                  <td>{{$d-> serial_number}}</td>
+											      <td>{{$d-> ticket_number}}</td>
 											      <td>{{$d-> date_in}}</td>
 											      <td>{{$d-> date_out}}</td>
 											    </tr>
@@ -73,7 +75,7 @@
 											                                        
                                     </div>
                                     @elseif(isset($message))
-                                       <p class="text-red">{{$message}}</p>  
+                                       <p class="text-danger">{{$message}}</p>  
                                      @endif
                                 </div>
    

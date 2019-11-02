@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Store;
+
 Auth::routes();
 Route::get('/home', 'NormalController@auth_user')->name('home');
 
@@ -26,17 +26,24 @@ Route::post('/item_live_search', 'NormalController@auth_user_search');
 
 
 // Admin Routes
+Route::get('/pdf_report', 'AdminController@pdf');
+
 Route::get('/admin_index', 'AdminController@index')->middleware('admin');
 Route::get('/admin_input','AdminController@create')->middleware('admin');
 Route::post('/input','AdminController@store')->middleware('admin');
 Route::post('/output','AdminController@output')->middleware('admin');
 Route::get('/admin_report','AdminController@report')->middleware('admin');
 Route::get('/basic_table','AdminController@table')->middleware('admin');
+Route::get('/admin_assets_table','AdminController@assets')->middleware('admin');
+Route::get('/admin_excel','AdminController@export')->middleware('admin');
+Route::get('/asset_form','AdminController@asset_blade')->middleware('admin');
+Route::post('/asset_input','AdminController@asset_input')->middleware('admin');
+
 Route::post('/live_search','AdminController@search')->middleware('admin');
 Route::get('/admin_profile','AdminController@admin_profile')->middleware('admin');
-Route::post('/update_profile','AdminController@update_profile')->middleware('admin');
+Route::post('/update_profile','AdminController@update_profile');
 Route::get('/{id}','AdminController@edit_input')->middleware('admin');
 Route::PATCH('/{id}','AdminController@update_input')->middleware('admin');
 Route::delete('/{id}','AdminController@delete_input')->middleware('admin');
 Route::post('/output_edit','AdminController@output')->middleware('admin');
-
+Route::post('/new_field','AdminController@new_fields')->middleware('admin');

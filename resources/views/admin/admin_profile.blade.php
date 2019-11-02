@@ -60,7 +60,7 @@
                                 <div class="form-group">
                                     <label class="col-md-12">Photo</label>
                                     <div class="col-md-12">
-                                          <input type="file" name ="avatar" class="form-control form-control-line">
+                                          <input type="file" name ="avatar" class="form-control form-control-line" required autocomplete="avatar" autofocus>
                                     </div>
                                 </div>
                             

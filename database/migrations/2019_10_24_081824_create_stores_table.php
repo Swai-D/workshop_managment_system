@@ -19,12 +19,18 @@ class CreateStoresTable extends Migration
             $table->string('type_of_machine');
             $table->string('serial_number');
             $table->string('location');
-            $table->string('brought_by');
+            $table->string('department');
+            $table->string('user_email');
+            $table->string('phone');
+            $table->string('bar_code');
+            $table->string('ticket_number')->nullable();
+            $table->string('office_phone')->nullable();
+            $table->string('remark')->nullable();
 
             $table->string('item_id')->default('In progress');
             $table->string('date_out')->default('In progress');
             $table->string('collected_by')->default('In progress');
-            $table->string('remark')->nullable();
+           
             $table->timestamps();
         });
     }

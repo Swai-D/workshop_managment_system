@@ -92,8 +92,9 @@ class NormalController extends Controller
 
         if(Auth::user()->usertype == 'admin'){
 
-            return redirect ('admin.admin_index');
+            return redirect ('/admin_index');
         }
+        
         else
         {
             return view('auth_user.auth_user');
@@ -138,7 +139,7 @@ class NormalController extends Controller
                 $q = Input::get ( 'q' );
                  if ($q != '')
                   {
-                    $data =Store::where('serial_number','=',$q)-> get();
+                    $data =Store::where('ticket_number','=',$q)-> get();
 
                      if(count($data) > 0)
 

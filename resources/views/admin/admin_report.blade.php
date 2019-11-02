@@ -19,7 +19,7 @@
 
     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
         <div class="white-box">
-            <h3 class="box-title">Store Report</h3>
+            <h3 class="box-title" style="color:#f33155">Store Report</h3>
             <ul class="list-inline text-right">
               <li>
                 <h5><i class="fa fa-circle m-r-5 text-info"></i>Input</h5> </li>
@@ -27,9 +27,15 @@
                 <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Output</h5>
               </li>
             </ul>
-              <div id="ct-visits" style="height: 405px;"></div>
+              <div id="ct-visits" style="height: 405px;">
+                 <!--  <canvas id="myAreaChart">    
+                  </canvas> -->
+              </div>
               </div>
         </div>
 </div>
+
+<script src="{{asset('vendor/jquery.min.js')}}"></script>
+<script src="{{asset('vendor/Chart.min.js')}}"></script>
 
 @endsection

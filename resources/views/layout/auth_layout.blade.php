@@ -83,10 +83,7 @@
             <!-- /.navbar-top-links -->
             <!-- /.navbar-static-side -->
         </nav>
-        <!-- End Top Navigation -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+       
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                

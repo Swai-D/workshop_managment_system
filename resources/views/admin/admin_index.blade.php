@@ -107,21 +107,26 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="{{asset('/admin_index')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="{{asset('/admin_index')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true" style="color:#cc6600"></i>Dashboard</a>
                     </li>
                      <li>
-                        <a href="{{url('/admin_input')}}" class="waves-effect"><i class="fa fa-sort-amount-desc fa-fw" aria-hidden="true"></i>Inputs</a>
+                        <a href="{{url('/admin_input')}}" class="waves-effect"><i class="fa fa-sort-amount-desc fa-fw" aria-hidden="true" style="color:#cc6600"></i>Services</a>
                     </li>
-                    <li>
-                        <a href="{{url('/basic_table')}}" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Basic Table</a>
-                    </li>
-    
-                    <li>
-                        <a href="{{url('/admin_report')}}" class="waves-effect"><i class="fa fa-book fa-fw" aria-hidden="true"></i>Report</a>
+
+                     <li>
+                        <a href="{{url('/admin_assets_table')}}" class="waves-effect"><i class="fa fa-adn fa-fw" aria-hidden="true" style="color:#cc6600"></i>Assets</a>
                     </li>
 
                     <li>
-                        <a href="{{url('/admin_profile')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
+                        <a href="{{url('/basic_table')}}" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true" style="color:#cc6600"></i>Workshop Log</a>
+                    </li>
+    
+                    <li>
+                        <a href="{{url('/admin_report')}}" class="waves-effect"><i class="fa fa-book fa-fw" aria-hidden="true" style="color:#cc6600"></i>Report</a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('/admin_profile')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true" style="color:#cc6600"></i>Profile</a>
                     </li>
                    
                 </ul>
@@ -164,12 +169,13 @@
                 <!-- ============================================================== -->
                 <!-- .row -->
                 <div class="row">
+                    <p class="lead" style="color:#f33155">&nbsp;&nbsp;Workshop Updates</p>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Store Items</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash"></div>
+                                    <img src="{{asset('asset/img/store1.png')}}">
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">{{$store}}</span></li>
                             </ul>
@@ -177,10 +183,10 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">In progress Items</h3>
+                            <h3 class="box-title">Repair Items</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash2"></div>
+                                    <img src="{{asset('asset/img/repair1.png')}}">
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">{{$repair}}</span></li>
                             </ul>
@@ -188,10 +194,10 @@
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
                         <div class="white-box analytics-info">
-                            <h3 class="box-title">Released Items</h3>
+                            <h3 class="box-title">use Items</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash3"></div>
+                                  <img src="{{asset('asset/img/release1.png')}}">
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">{{$release}}</span></li>
                             </ul>
@@ -199,99 +205,87 @@
                     </div>
                 </div>
                 <!--/.row -->
-                <!--row -->
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                     <div class="row">
+                    <!-- .col -->
+                    <div class="col-md-12 col-lg-8 col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Updates</h3>
-                            <ul class="list-inline text-right">
+                            <h3 class="box-title">Workshop Comments</h3>
+                            <div class="comment-center p-t-10">
+                                <div class="comment-body">
+
+                                    <div class="mail-contnet">
+                                      @if($percentage > 50)
+                                       <p class="lead" style="color:#f33155">The are many  items for repair in Workshop Store !</p>
+
+                                       @else
+                                        <p class="lead" style="color:#f33155">The Store Status is fine fore now !</p>
+                                       @endif
+
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="panel">
+                            <div class="sk-chat-widgets">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        Store Status
+                                    </div>
+                                    <div class="panel-body">
+                                      <b class="lead"style="color:#f33155">{{$percentage}}%</b> Items In repair
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!--row -->
+                <hr>
+                <!-- /.row -->
+                   <div class="row">
+                    <p class="lead" style="color:#f33155">&nbsp;&nbsp;Assets Updates</p>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Store Items</h3>
+                            <ul class="list-inline two-part">
                                 <li>
-                                    <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5> </li>
-                                <li>
-                                    <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5> </li>
+                                    <img src="{{asset('asset/img/store.png')}}">
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">{{$total_in_store}}</span></li>
                             </ul>
-                            <div style="height: 405px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">In Repair Items</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <img src="{{asset('asset/img/repair.png')}}">
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">{{$total_in_repair}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-xs-12">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Use Items</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                   <img src="{{asset('asset/img/release.png')}}">
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">{{$total_in_use}}</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <!-- ============================================================== -->
                 <!-- table -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
-                        <div class="white-box">
-                            <div class="col-md-3 col-sm-4 col-xs-6 pull-right">
-                                {{date('M D Y')}}
-                            </div>
-                            <h3 class="box-title">Recent sales</h3>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>NAME</th>
-                                            <th>STATUS</th>
-                                            <th>DATE</th>
-                                            <th>Mac Address</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-success"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-info"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-info"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-danger"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-success"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-danger"></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td class="txt-oflo"></td>
-                                            <td></td>
-                                            <td class="txt-oflo"></td>
-                                            <td><span class="text-success"></span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- ============================================================== -->
                 <!-- chat-listing & recent comments -->
                 <!-- ============================================================== -->
@@ -299,13 +293,15 @@
                     <!-- .col -->
                     <div class="col-md-12 col-lg-8 col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Recent Comments</h3>
+                            <h3 class="box-title">Asset Comments</h3>
                             <div class="comment-center p-t-10">
                                 <div class="comment-body">
 
                                     <div class="mail-contnet">
-                                      @if($percentage > 50)
-                                       <p style="color:#f33155">The are many In-progress items in Store !</p>
+                                      @if($percentage_asset > 50)
+                                      <p class="lead" style="color:#f33155">The are many  items for repair in Asset Store !</p>
+                                      @else
+                                      <p class="lead">The store status is fine fore now !</p>
                                        @endif
 
                                     </div>
@@ -323,7 +319,7 @@
                                         Store Status
                                     </div>
                                     <div class="panel-body">
-                                      <b style="color:#f33155">{{$percentage}}%</b> Items In progress
+                                      <b style="color:#f33155">{{$percentage_asset}}%</b> Items In repair
                                     </div>
                                 </div>
                             </div>

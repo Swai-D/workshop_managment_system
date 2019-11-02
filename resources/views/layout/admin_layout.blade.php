@@ -106,21 +106,25 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="{{url('/admin_index')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="{{url('/admin_index')}}" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true" style="color:#cc6600"></i>Dashboard</a>
                     </li>
                      <li>
-                        <a href="{{url('/admin_input')}}" class="waves-effect"><i class="fa fa-sort-amount-desc fa-fw" aria-hidden="true"></i>Inputs</a>
+                        <a href="{{url('/admin_input')}}" class="waves-effect"><i class="fa fa-sort-amount-desc fa-fw" aria-hidden="true" style="color:#cc6600"></i>Services</a>
+                    </li>
+
+                     <li>
+                        <a href="{{url('/admin_assets_table')}}" class="waves-effect"><i class="fa fa-adn fa-fw" aria-hidden="true" style="color:#cc6600"></i>Assets</a>
                     </li>
                     <li>
-                        <a href="{{url('/basic_table')}}" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Basic Table</a>
+                        <a href="{{url('/basic_table')}}" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true" style="color:#cc6600"></i>Workshop Log</a>
                     </li>
                    
                     <li>
-                        <a href="{{url('/admin_report')}}" class="waves-effect"><i class="fa fa-book fa-fw" aria-hidden="true"></i>Report</a>
+                        <a href="{{url('/admin_report')}}" class="waves-effect"><i class="fa fa-book fa-fw" aria-hidden="true" style="color:#cc6600"></i>Report</a>
                     </li>
 
                     <li>
-                        <a href="{{url('/admin_profile')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
+                        <a href="{{url('/admin_profile')}}" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true" style="color:#cc6600"></i>Profile</a>
                     </li>
                    
 

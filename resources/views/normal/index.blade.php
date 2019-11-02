@@ -112,9 +112,9 @@
         </div>
         <div class="col-lg-3 col-md-6 text-center">
           <div class="mt-5">
-            <i class="fas fa-4x fa-windows text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Windows installation</h3>
-            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+            <i class="fas fa-4x fa-table text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Assets Management</h3>
+            <p class="text-muted mb-0">We manage all kind of hardware asset that we assign in our system</p>
           </div>
         </div>
       </div>
