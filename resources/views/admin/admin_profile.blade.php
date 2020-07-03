@@ -31,7 +31,7 @@
                             </div>
                             <div class="user-btm-box">
                                 {{Auth::user()->name}}
-                            </div>
+                            </div
                         </div>
                     </div>
                     <div class="col-md-8 col-xs-12">

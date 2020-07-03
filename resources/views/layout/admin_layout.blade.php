@@ -188,4 +188,4 @@
     <script src="{{asset('plugins/bower_components/toast-master/js/jquery.toast.js')}}"></script>
 </body>
 
-</html>
+</html>9
